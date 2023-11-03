@@ -1,13 +1,14 @@
-import { useState } from 'react'
 import './App.css'
+import MainContent from './components/mainContent/MainContent';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   
-
   return (
-    <>
-      Hi this is jatin
-    </>
+    <div className='App'>
+      <Navbar/>
+      <MainContent/>
+    </div>
   )
 }
 
