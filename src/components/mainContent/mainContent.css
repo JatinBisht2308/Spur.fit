@@ -1,0 +1,7 @@
+.MainContent{
+    width: calc(100vw - 96px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
