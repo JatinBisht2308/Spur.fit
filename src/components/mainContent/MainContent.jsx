@@ -1,14 +1,27 @@
-import React from 'react'
-import Topbar from '../topbar/Topbar';
-import Records from '../records/Records';
-import './mainContent.css'
+import React, { useState } from "react";
+import Topbar from "../topbar/Topbar";
+import Records from "../records/Records";
+import AskCopilot from "../askCopilot/AskCopilot";
+import "./mainContent.css";
 const MainContent = () => {
-  return (
-    <div className='MainContent'>
-      <Topbar/>
-      <Records/>
-    </div>
-  )
-}
+  const [showAc, setShowAc] = useState(false);
 
-export default MainContent
+  const toggleAc = () => {
+    if (showAc) {
+      setShowAc(false);
+    } else {
+      setShowAc(true);
+    }
+  };
+  return (
+    <div className="MainContent">
+      <Topbar toggleAc={toggleAc} />
+        <div className="data-records">
+          <Records show={showAc} />
+          {showAc && <AskCopilot />}
+        </div>
+    </div>
+  );
+};
+
+export default MainContent;

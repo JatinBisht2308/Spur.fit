@@ -1,10 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
 import Search from "../../assets/Search.png";
 import Notification from '../../assets/Frame.png'
 import User from '../../assets/User.png';
 import ChatSparkle from '../../assets/ChatSparkle.png';
 import "./topbar.css";
-const Topbar = () => {
+const Topbar = (props) => {
+ 
   return (
     <div className="Topbar">
       <div className="left-tb">
@@ -16,7 +17,7 @@ const Topbar = () => {
       </div>
       <div className="right-tb">
           <img className="notification-btn" src={Notification} alt="" />
-          <button>
+          <button onClick={props.toggleAc}>
             <img src={ChatSparkle} alt="" />
             Ask Copilot
           </button>

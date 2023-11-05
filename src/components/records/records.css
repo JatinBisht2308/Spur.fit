@@ -4,12 +4,17 @@
   border-radius: 20px 20px 20px 20px;
   background-color: #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.03));
-  padding: 10px 30px 10px 15px;
+  padding: 10px 0px 10px 0px;
+}
+.Records.open{
+  width: calc(100vw - 440px);
 }
 .recordsHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 5px;
+  padding: 0px 20px 0px 5px;
 }
 .left-header {
   display: flex;
@@ -67,7 +72,7 @@
   line-height: 22px;
   letter-spacing: -0.43px;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12),
-  0px 4px 8px 0px rgba(0, 0, 0, 0.14);
+    0px 4px 8px 0px rgba(0, 0, 0, 0.14);
 }
 .addnew > img {
   margin-right: 2px;
@@ -125,11 +130,119 @@
   border: 1px solid var(--Gradient-1, #464feb);
   padding: 5px 8px;
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12),
-  0px 4px 8px 0px rgba(0, 0, 0, 0.14);
+    0px 4px 8px 0px rgba(0, 0, 0, 0.14);
 }
 .funnel {
   margin-right: 2px;
 }
 .dropdown {
   margin-left: 4px;
+}
+
+/* -------------------- Table Styling ----------------- */
+.recordsTable {
+  background-color: rgb(253, 253, 253);
+  width: 100%;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.recordsTable thead {
+  background-color: #f8f8f8;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+}
+tr {
+  border-top: 1px solid rgba(0, 0, 0, 0.1); /* Top border style */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Bottom border style */
+}
+.recordsTable th:nth-child(2) > .trainee {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.recordsTable th:nth-child(1) > .head-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 1px solid rgb(135, 133, 133);
+  border-radius: 6px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  &:checked {
+    background-color: rgba(70, 8, 193, 0.719);
+  }
+
+  &:focus {
+    outline: none !important;
+  }
+}
+.recordsTable td:nth-child(1) > .checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recordsTable td:nth-child(2) > .user-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.recordsTable td:nth-child(2) > .user-name > img {
+  margin-right: 8px;
+}
+.recordsTable td:nth-child(10) > .actions > img:nth-child(1) {
+  margin-right: 10px;
+}
+.recordsTable .compliance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recordsTable .last-workout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recordsTable .workout-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eff4ff;
+  color: #556ee6;
+}
+.recordsTable .last-modified {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recordsTable .diet-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7f6eb;
+  color: #09a033;
+}
+.recordsTable .trainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recordsTable .actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
